@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP CRUD Form</title>
+</head>
+<body>
+    <h2>Add User</h2>
+    <form action="process.php" method="post">
+        <!-- Include a user ID field for adding a new user -->
+        <label for="userId">User ID:</label>
+        <input type="number" name="userId">
+
+        <label for="firstName">First Name:</label>
+        <input type="text" name="firstName" required>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" name="lastName" required>
+
+        <label for="mobileNumber">Mobile Number:</label>
+        <input type="tel" name="mobileNumber" required>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" required>
+
+        <label for="address">Address:</label>
+        <textarea name="address" rows="4" required></textarea>
+
+        <input type="hidden" name="action" value="add">
+        <button type="submit">Add User</button>
+    </form>
+
+    <hr>
+
+    <h2>Update User</h2>
+    <form action="process.php" method="post">
+        <label for="userIdToUpdate">User ID to Update:</label>
+        <input type="number" name="userIdToUpdate" required>
+
+        <label for="newFirstName">New First Name:</label>
+        <input type="text" name="newFirstName" required>
+
+        <input type="hidden" name="action" value="update">
+        <button type="submit">Update User</button>
+    </form>
+
+    <hr>
+
+    <h2>Delete User</h2>
+    <form action="process.php" method="post">
+        <label for="userIdToDelete">User ID to Delete:</label>
+        <input type="number" name="userIdToDelete" required>
+
+        <input type="hidden" name="action" value="delete">
+        <button type="submit">Delete User</button>
+    </form>
+</body>
+</html>
