@@ -7,6 +7,8 @@
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
+-- import thi file to php myadmin import section
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -20,7 +22,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `phpcrud`
 --
-
+CREATE Database phpcrud;
+USE phpcrud;
 -- --------------------------------------------------------
 
 --
